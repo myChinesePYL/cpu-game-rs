@@ -1,7 +1,7 @@
 /// `UV`UV
 pub struct UV {
-    u: f64,
-    v: f64,
+    pub u: f64,
+    pub v: f64,
 }
 
 /// `Vertex`顶点
