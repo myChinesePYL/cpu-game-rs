@@ -1,8 +1,10 @@
+/// `UV`UV
 pub struct UV {
     u: f64,
     v: f64,
 }
 
+/// `Vertex`顶点
 pub struct Vertex {
     pub position: glm::Vector3<f64>,
     pub color: palette::LinSrgba<f64>,
@@ -57,6 +59,7 @@ impl Object {
 }
 
 #[allow(non_snake_case)]
+#[must_use]
 /// `create_M(px: f64, py: f64, pz: f64, theta_x: f64, theta_y: f64, theta_z: f64, sx: f64, sy: f64, sz: f64) -> glm::Matrix4<f64>`
 /// `px` `py` `pz`是平移的xyz坐标
 /// `theta_x` `theta_y` `theta_z`是旋转的角度0°=0.0，360°=π
