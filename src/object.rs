@@ -84,8 +84,8 @@ pub fn create_M(
                           0.0, 1.0, 0.0, 0.0;
                           -theta_y.sin(), 0.0, theta_y.cos(), 0.0;
                           0.0, 0.0, 0.0, 1.0];
-    let RZ = glm::matrix![theta_z.cos(), 0.0, -theta_z.sin(), 0.0;
-                          theta_z.sin(), 1.0, theta_z.cos(), 0.0;
+    let RZ = glm::matrix![theta_z.cos(), -theta_z.sin(), 0.0, 0.0;
+                          theta_z.sin(), theta_z.cos(), 0.0, 0.0;
                           0.0, 0.0, 1.0, 0.0;
                           0.0, 0.0, 0.0, 1.0];
     let S = glm::matrix![sx, 0.0, 0.0, 0.0;
@@ -97,5 +97,5 @@ pub fn create_M(
                          0.0, 0.0, 1.0, pz;
                          0.0, 0.0, 0.0, 1.0];
 
-    RZ * RY * RX * S * T
+    T * S * RZ * RY * RX
 }
