@@ -1,7 +1,7 @@
 /// `UV`UV
 pub struct UV {
-    pub u: f64,
-    pub v: f64,
+    pub u: f32,
+    pub v: f32,
 }
 
 /// `Vertex`顶点
@@ -16,6 +16,11 @@ pub struct DData {
     pub position: glm::Vec3,
     pub viewpoint: glm::Vec3,
     surface: [Vertex; 3],
+}
+pub struct LData {
+    pub position: glm::Vec3,
+    pub viewpoint: glm::Vec3,
+    line: [Vertex; 2],
 }
 
 impl DData {
