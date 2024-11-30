@@ -13,3 +13,9 @@ impl Scene {
         Self { object: obj }
     }
 }
+
+#[derive(Debug)]
+pub struct Group {
+    object: Object,
+    pos: glm::Vec3,
+}
